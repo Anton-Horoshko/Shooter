@@ -1,24 +1,68 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
-    public Transform enemy;
+    public Transform player;
+    private NavMeshAgent agent;
+    public float detectionRange = 10f;
+    public float idleWanderRadius = 3f;
+    private Vector3 idleTarget;
+    private float idleTimer;
+    private float idleWaitTime = 2f;
 
     void Start()
     {
-        
+        agent = GetComponent<NavMeshAgent>();
+        ChooseNewIdleTarget();
     }
 
     void Update()
     {
-        Idle();
+        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+
+        if (distanceToPlayer <= detectionRange)
+        {
+            ChasePlayer();
+        }
+        else
+        {
+            IdleWander();
+        }
     }
 
-    public void Idle()
+    void ChasePlayer()
     {
-        enemy.transform.position += Random.onUnitSphere * 0.1f;
+        agent.SetDestination(player.position);
     }
 
+    void IdleWander()
+    {
+        idleTimer += Time.deltaTime;
+
+        if (idleTimer >= idleWaitTime || Vector3.Distance(transform.position, idleTarget) < 1f)
+        {
+            ChooseNewIdleTarget();
+            idleTimer = 0f;
+        }
+
+        agent.SetDestination(idleTarget);
+    }
+
+    void ChooseNewIdleTarget()
+    {
+        Vector3 randomDirection = Random.insideUnitSphere * idleWanderRadius;
+        randomDirection += transform.position;
+        NavMeshHit hit;
+        if (NavMesh.SamplePosition(randomDirection, out hit, idleWanderRadius, NavMesh.AllAreas))
+        {
+            idleTarget = hit.position;
+        }
+        else
+        {
+            idleTarget = transform.position;
+        }
+    }
 }
