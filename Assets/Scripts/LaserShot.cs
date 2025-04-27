@@ -5,6 +5,7 @@ public class LaserShot : MonoBehaviour
 {
     public Transform playerCamera;
     public int maxBounces = 3;
+    public int damageAmount = 25;
     public float maxDistance = 30f;
     public LineRenderer lineRenderer;
 
@@ -40,7 +41,8 @@ public class LaserShot : MonoBehaviour
 
                 if (hit.collider.CompareTag("Enemy"))
                 {
-                    Destroy(hit.collider.gameObject);
+                    gameObject.GetComponent<EnemyHealth>().TakeDamage(damageAmount);
+                    //Destroy(hit.collider.gameObject);
                     break;
                 }
 
