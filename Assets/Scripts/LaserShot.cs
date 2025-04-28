@@ -41,8 +41,11 @@ public class LaserShot : MonoBehaviour
 
                 if (hit.collider.CompareTag("Enemy"))
                 {
-                    gameObject.GetComponent<EnemyHealth>().TakeDamage(damageAmount);
-                    //Destroy(hit.collider.gameObject);
+                    EnemyHealth enemyHealth = hit.collider.GetComponent<EnemyHealth>();
+                    if (enemyHealth != null)
+                    {
+                        enemyHealth.TakeDamage(damageAmount);
+                    }
                     break;
                 }
 
