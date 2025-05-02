@@ -8,9 +8,9 @@ public class PlayerStats : MonoBehaviour
     public int currentXP = 0;
     public int xpToNextLevel = 100;
     public int skillPoints= 0;
-    public int maxHP= 0;
+    public int maxHP= 100;
     public int damage = 25;
-    public int maxShootBounces = 3;
+    public int maxShootBounces = 1;
     public float moveSpeed = 6f;
     public float jumpHeight = 3f;
     public float maxShootDistance = 30f;
@@ -45,31 +45,31 @@ public class PlayerStats : MonoBehaviour
 
     public void UpgradeDamage()
     {
-        damage += 1;
+        damage += 10;
         skillPoints--;
     }
 
     public void UpgradeHP()
     {
-        maxHP += 1;
+        maxHP += 20;
         skillPoints--;
     }
 
     public void UpgradeSpeed()
     {
-        moveSpeed += 1;
+        moveSpeed += 3;
         skillPoints--;
     }
 
     public void UpgradeJumpHeight()
     {
-        jumpHeight += 1;
+        jumpHeight += 3;
         skillPoints--;
     }
 
     public void UpgradeMaxShootDistance()
     {
-        maxShootDistance += 1;
+        maxShootDistance += 5;
         skillPoints--;
     }
 
