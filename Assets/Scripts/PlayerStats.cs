@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
+    public static PlayerStats Instance;
+
     public int currentLevel = 1;
     public int currentXP = 0;
     public int xpToNextLevel = 100;
@@ -17,7 +19,7 @@ public class PlayerStats : MonoBehaviour
 
     void Start()
     {
-        
+        Instance = this;
     }
 
     void Update()

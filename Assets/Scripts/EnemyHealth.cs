@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    //public PlayerUpgreates playerUpgreates;
     public int maxHealth = 100;
     private int currentHealth;
 
@@ -25,7 +24,7 @@ public class EnemyHealth : MonoBehaviour
     void Die()
     {
         Destroy(gameObject);
-        //playerUpgreates.AddUpgreatePoint(1);
+        PlayerStats.Instance.GainXP(25);
         Debug.Log("Враг умер!");
     }
 }

@@ -11,12 +11,12 @@ public class LaserShot : MonoBehaviour
 
     void Start()
     {
-
+        lineRenderer.enabled = false;
     }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !lineRenderer.enabled)
         {
             ShootLaser();
         }
@@ -24,9 +24,10 @@ public class LaserShot : MonoBehaviour
 
     void ShootLaser()
     {
-        Vector3 origin = playerCamera.position;
+        Vector3 origin = playerCamera.position - new Vector3(0, 0, -1f);
         Vector3 direction = playerCamera.forward;
 
+        lineRenderer.enabled = true;
         lineRenderer.positionCount = 1;
         lineRenderer.SetPosition(0, origin);
 
@@ -59,5 +60,11 @@ public class LaserShot : MonoBehaviour
                 break;
             }
         }
+            Invoke("DisableLaser", 0.5f);
     }
+    void DisableLaser()
+    {
+        lineRenderer.enabled = false;
+    }
+
 }
