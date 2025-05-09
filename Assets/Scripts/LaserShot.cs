@@ -4,9 +4,6 @@ using UnityEngine;
 public class LaserShot : MonoBehaviour
 {
     public Transform playerCamera;
-    public int maxBounces = 3;
-    public int damageAmount = 25;
-    public float maxDistance = 30f;
     public LineRenderer lineRenderer;
 
     void Start()
@@ -32,9 +29,9 @@ public class LaserShot : MonoBehaviour
         lineRenderer.SetPosition(0, origin);
 
         int bounces = 0;
-        while (bounces < maxBounces)
+        while (bounces < PlayerStats.Instance.maxShootBounces)
         {
-            if (Physics.Raycast(origin, direction, out RaycastHit hit, maxDistance))
+            if (Physics.Raycast(origin, direction, out RaycastHit hit, PlayerStats.Instance.maxShootDistance))
             {
                 bounces++;
                 lineRenderer.positionCount++;
@@ -45,7 +42,7 @@ public class LaserShot : MonoBehaviour
                     EnemyHealth enemyHealth = hit.collider.GetComponent<EnemyHealth>();
                     if (enemyHealth != null)
                     {
-                        enemyHealth.TakeDamage(damageAmount);
+                        enemyHealth.TakeDamage(PlayerStats.Instance.damage);
                     }
                     break;
                 }
@@ -56,7 +53,7 @@ public class LaserShot : MonoBehaviour
             else
             {
                 lineRenderer.positionCount++;
-                lineRenderer.SetPosition(bounces + 1, origin + direction * maxDistance);
+                lineRenderer.SetPosition(bounces + 1, origin + direction * PlayerStats.Instance.maxShootDistance);
                 break;
             }
         }

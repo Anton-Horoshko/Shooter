@@ -6,8 +6,6 @@ public class PlayerController : MonoBehaviour
 {
     bool isGrounded;
     public float mouseSensitivity = 1000f;
-    public float playerSpeed = 6f;
-    public float jumpHeight = 3f;
     public float groundDistance = 0.4f;
     public float gravityCoefficient = 2;
     public Transform groundCheck;
@@ -50,11 +48,11 @@ public class PlayerController : MonoBehaviour
         float playerPositionZ = Input.GetAxis("Vertical");
 
         Vector3 move = transform.right * playerPositionX + transform.forward * playerPositionZ;
-        characterController.Move(move * playerSpeed * Time.deltaTime);
+        characterController.Move(move * PlayerStats.Instance.moveSpeed * Time.deltaTime);
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            velocity.y = Mathf.Sqrt(PlayerStats.Instance.jumpHeight * -2f * gravity);
         }
 
         velocity.y += gravity * gravityCoefficient * Time.deltaTime;
