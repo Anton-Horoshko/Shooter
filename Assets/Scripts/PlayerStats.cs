@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerStats : MonoBehaviour
 {
     public static PlayerStats Instance;
+
+    public TMPro.TextMeshProUGUI skillPointsText;
 
     public int currentLevel = 1;
     public int currentXP = 0;
@@ -42,6 +45,9 @@ public class PlayerStats : MonoBehaviour
     {
         currentLevel++;
         skillPoints++;
+
+        skillPointsText.text = "Points : " + skillPoints;
+
         xpToNextLevel += Mathf.RoundToInt(xpToNextLevel * 0.25f);
     }
 
@@ -49,35 +55,41 @@ public class PlayerStats : MonoBehaviour
     {
         damage += 10;
         skillPoints--;
+        skillPointsText.text = "Points : " + skillPoints;
     }
 
     public void UpgradeHP()
     {
         maxHP += 20;
         skillPoints--;
+        skillPointsText.text = "Points : " + skillPoints;
     }
 
     public void UpgradeSpeed()
     {
         moveSpeed += 3;
         skillPoints--;
+        skillPointsText.text = "Points : " + skillPoints;
     }
 
     public void UpgradeJumpHeight()
     {
         jumpHeight += 3;
         skillPoints--;
+        skillPointsText.text = "Points : " + skillPoints;
     }
 
     public void UpgradeMaxShootDistance()
     {
         maxShootDistance += 5;
         skillPoints--;
+        skillPointsText.text = "Points : " + skillPoints;
     }
 
     public void UpgradeMaxShootBounces()
     {
         maxShootBounces += 1;
         skillPoints--;
+        skillPointsText.text = "Points : " + skillPoints;
     }
 }
