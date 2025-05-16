@@ -53,43 +53,67 @@ public class PlayerStats : MonoBehaviour
 
     public void UpgradeDamage()
     {
-        damage += 10;
-        skillPoints--;
-        skillPointsText.text = "Points : " + skillPoints;
+        if (skillPoints > 0)
+        {
+            damage += 10;
+            skillPoints--;
+            skillPointsText.text = "Points : " + skillPoints;
+
+        }
     }
 
     public void UpgradeHP()
     {
-        maxHP += 20;
-        skillPoints--;
-        skillPointsText.text = "Points : " + skillPoints;
+        if (skillPoints > 0)
+        {
+            maxHP += 20;
+            skillPoints--;
+            skillPointsText.text = "Points : " + skillPoints;
+
+        }
     }
 
     public void UpgradeSpeed()
     {
-        moveSpeed += 3;
-        skillPoints--;
-        skillPointsText.text = "Points : " + skillPoints;
+        if (skillPoints > 0)
+        {
+            moveSpeed += 3;
+            skillPoints--;
+            skillPointsText.text = "Points : " + skillPoints;
+
+        }
     }
 
     public void UpgradeJumpHeight()
     {
-        jumpHeight += 3;
-        skillPoints--;
-        skillPointsText.text = "Points : " + skillPoints;
+        if (skillPoints > 0)
+        {
+            jumpHeight += 3;
+            skillPoints--;
+            skillPointsText.text = "Points : " + skillPoints;
+
+        }
     }
 
     public void UpgradeMaxShootDistance()
     {
-        maxShootDistance += 5;
-        skillPoints--;
-        skillPointsText.text = "Points : " + skillPoints;
+        if (skillPoints > 0)
+        {
+            maxShootDistance += 5;
+            skillPoints--;
+            skillPointsText.text = "Points : " + skillPoints;
+
+        }
     }
 
     public void UpgradeMaxShootBounces()
     {
-        maxShootBounces += 1;
-        skillPoints--;
-        skillPointsText.text = "Points : " + skillPoints;
+        if (skillPoints > 0)
+        {
+            maxShootBounces += 1;
+            skillPoints--;
+            skillPointsText.text = "Points : " + skillPoints;
+
+        }
     }
 }
