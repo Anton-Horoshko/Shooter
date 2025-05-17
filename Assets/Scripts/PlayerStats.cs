@@ -6,6 +6,7 @@ using TMPro;
 public class PlayerStats : MonoBehaviour
 {
     public static PlayerStats Instance;
+    public UpGrade upGrade;
 
     public TMPro.TextMeshProUGUI skillPointsText;
 
@@ -47,6 +48,7 @@ public class PlayerStats : MonoBehaviour
         skillPoints++;
 
         skillPointsText.text = "Points : " + skillPoints;
+        upGrade.TogglePause();
 
         xpToNextLevel += Mathf.RoundToInt(xpToNextLevel * 0.25f);
     }
@@ -60,6 +62,7 @@ public class PlayerStats : MonoBehaviour
             skillPointsText.text = "Points : " + skillPoints;
 
         }
+        upGrade.TogglePause();
     }
 
     public void UpgradeHP()
@@ -71,6 +74,7 @@ public class PlayerStats : MonoBehaviour
             skillPointsText.text = "Points : " + skillPoints;
 
         }
+        upGrade.TogglePause();
     }
 
     public void UpgradeSpeed()
@@ -82,6 +86,7 @@ public class PlayerStats : MonoBehaviour
             skillPointsText.text = "Points : " + skillPoints;
 
         }
+        upGrade.TogglePause();
     }
 
     public void UpgradeJumpHeight()
@@ -93,6 +98,7 @@ public class PlayerStats : MonoBehaviour
             skillPointsText.text = "Points : " + skillPoints;
 
         }
+        upGrade.TogglePause();
     }
 
     public void UpgradeMaxShootDistance()
@@ -104,6 +110,7 @@ public class PlayerStats : MonoBehaviour
             skillPointsText.text = "Points : " + skillPoints;
 
         }
+        upGrade.TogglePause();
     }
 
     public void UpgradeMaxShootBounces()
@@ -115,5 +122,6 @@ public class PlayerStats : MonoBehaviour
             skillPointsText.text = "Points : " + skillPoints;
 
         }
+        upGrade.TogglePause();
     }
 }
