@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     bool isGrounded;
-    public float mouseSensitivity = 1000f;
+    public float mouseSensitivity = 100f;
     public float groundDistance = 0.4f;
     public float gravityCoefficient = 2;
     public Transform groundCheck;
