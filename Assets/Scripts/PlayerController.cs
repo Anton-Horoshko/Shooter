@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     bool isGrounded;
-    public float mouseSensitivity = 100f;
     public float groundDistance = 0.4f;
     public float gravityCoefficient = 2;
     public Transform groundCheck;
@@ -27,8 +26,8 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         //player look
-        float mousePositionX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mousePositionY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        float mousePositionX = Input.GetAxis("Mouse X") * SensitivitySettings.sensitivity * Time.deltaTime;
+        float mousePositionY = Input.GetAxis("Mouse Y") * SensitivitySettings.sensitivity * Time.deltaTime;
 
         cameraRotationX -= mousePositionY;
         cameraRotationX = Mathf.Clamp(cameraRotationX, -90f, 90f);
