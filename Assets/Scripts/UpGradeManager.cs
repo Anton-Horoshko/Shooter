@@ -9,10 +9,7 @@ public class UpGrade : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            TogglePause();
-        }
+
     }
 
     public void TogglePause()
