@@ -4,12 +4,32 @@ using UnityEngine;
 
 public class PauseMenuManager : MonoBehaviour
 {
-    public UpGrade upGrade;
+    public GameObject pauseMenuUI;
+    private bool isVisible = false;
+
     void Update()
     {
-/*        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            upGrade.TogglePause();
-        }*/
+            TogglePause();
+        }
+    }
+
+    public void TogglePause()
+    {
+        if (!isVisible)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            isVisible = true;
+            pauseMenuUI.SetActive(true);
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            isVisible = false;
+            pauseMenuUI.SetActive(false);
+            Time.timeScale = 1f;
+        }
     }
 }

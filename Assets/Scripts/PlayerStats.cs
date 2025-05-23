@@ -48,7 +48,7 @@ public class PlayerStats : MonoBehaviour
         skillPoints++;
 
         skillPointsText.text = "Points : " + skillPoints;
-        upGrade.TogglePause();
+        upGrade.ToggleUpgrade();
 
         xpToNextLevel += Mathf.RoundToInt(xpToNextLevel * 0.25f);
     }
@@ -62,7 +62,7 @@ public class PlayerStats : MonoBehaviour
             skillPointsText.text = "Points : " + skillPoints;
 
         }
-        upGrade.TogglePause();
+        upGrade.ToggleUpgrade();
     }
 
     public void UpgradeHP()
@@ -74,7 +74,7 @@ public class PlayerStats : MonoBehaviour
             skillPointsText.text = "Points : " + skillPoints;
 
         }
-        upGrade.TogglePause();
+        upGrade.ToggleUpgrade();
     }
 
     public void UpgradeSpeed()
@@ -86,7 +86,7 @@ public class PlayerStats : MonoBehaviour
             skillPointsText.text = "Points : " + skillPoints;
 
         }
-        upGrade.TogglePause();
+        upGrade.ToggleUpgrade();
     }
 
     public void UpgradeJumpHeight()
@@ -98,7 +98,7 @@ public class PlayerStats : MonoBehaviour
             skillPointsText.text = "Points : " + skillPoints;
 
         }
-        upGrade.TogglePause();
+        upGrade.ToggleUpgrade();
     }
 
     public void UpgradeMaxShootDistance()
@@ -110,7 +110,7 @@ public class PlayerStats : MonoBehaviour
             skillPointsText.text = "Points : " + skillPoints;
 
         }
-        upGrade.TogglePause();
+        upGrade.ToggleUpgrade();
     }
 
     public void UpgradeMaxShootBounces()
@@ -122,6 +122,6 @@ public class PlayerStats : MonoBehaviour
             skillPointsText.text = "Points : " + skillPoints;
 
         }
-        upGrade.TogglePause();
+        upGrade.ToggleUpgrade();
     }
 }

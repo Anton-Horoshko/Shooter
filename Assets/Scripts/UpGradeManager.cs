@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UpGrade : MonoBehaviour
 {
-    public GameObject pauseUI;
+    public GameObject upgradeUI;
     private bool IsVisible = false;
 
     void Update()
@@ -12,20 +12,20 @@ public class UpGrade : MonoBehaviour
 
     }
 
-    public void TogglePause()
+    public void ToggleUpgrade()
     {
         if (!IsVisible)
         {
             Cursor.lockState = CursorLockMode.None;
             IsVisible = true;
-            pauseUI.SetActive(true);
+            upgradeUI.SetActive(true);
             Time.timeScale = 0f;
         }
         else
         {
             Cursor.lockState = CursorLockMode.Locked;
             IsVisible = false;
-            pauseUI.SetActive(false);
+            upgradeUI.SetActive(false);
             Time.timeScale = 1f;
         }
     }
