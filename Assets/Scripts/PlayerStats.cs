@@ -9,6 +9,7 @@ public class PlayerStats : MonoBehaviour
     public UpGrade upGrade;
 
     public TMPro.TextMeshProUGUI skillPointsText;
+    public TextMeshPro healthText;
 
     public int currentLevel = 1;
     public int currentXP = 0;
@@ -72,6 +73,7 @@ public class PlayerStats : MonoBehaviour
             maxHP += 20;
             skillPoints--;
             skillPointsText.text = "Points : " + skillPoints;
+            healthText.text = "HP: " + maxHP.ToString();
 
         }
         upGrade.ToggleUpgrade();

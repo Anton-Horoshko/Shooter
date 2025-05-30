@@ -18,20 +18,12 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            TakeDamage(20);
-        }
-    }
-
-    // Optional: Add debug to verify collision is detected
-    private void OnCollisionStay(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Enemy"))
         {
             Debug.Log("Player is colliding with Enemy");
+            TakeDamage(20);
         }
     }
 }
