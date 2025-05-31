@@ -14,7 +14,7 @@ public class PlayerHealth : MonoBehaviour
         if (PlayerStats.Instance.maxHP <= 0)
         {
             PlayerStats.Instance.maxHP = 0;
-            // Add player death logic here if needed
+            Debug.Log("Player has died");
         }
     }
 
