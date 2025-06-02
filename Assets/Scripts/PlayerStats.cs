@@ -51,7 +51,7 @@ public class PlayerStats : MonoBehaviour
         skillPointsText.text = "Points : " + skillPoints;
         upGrade.ToggleUpgrade();
 
-        xpToNextLevel += Mathf.RoundToInt(xpToNextLevel * 0.25f);
+        xpToNextLevel += Mathf.RoundToInt(xpToNextLevel * 0.05f);
     }
 
     public void UpgradeDamage()
