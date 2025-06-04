@@ -22,9 +22,14 @@ public class PlayerStats : MonoBehaviour
     public float jumpHeight = 3f;
     public float maxShootDistance = 30f;
 
+    public bool isDead = false;
+
     void Start()
     {
         Instance = this;
+        isDead = false;
+        Time.timeScale = 1f;
+        ResetStats();
     }
 
     void Update()
@@ -125,5 +130,22 @@ public class PlayerStats : MonoBehaviour
 
         }
         upGrade.ToggleUpgrade();
+    }
+
+    public void ResetStats()
+    {
+        // Reset player stats
+        PlayerStats.Instance.currentLevel = 1;
+        PlayerStats.Instance.currentXP = 0;
+        PlayerStats.Instance.skillPoints = 0;
+        PlayerStats.Instance.maxHP = 100;
+        PlayerStats.Instance.damage = 25;
+        PlayerStats.Instance.maxShootBounces = 1;
+        PlayerStats.Instance.moveSpeed = 6f;
+        PlayerStats.Instance.jumpHeight = 3f;
+        PlayerStats.Instance.maxShootDistance = 30f;
+        // Update UI
+        PlayerStats.Instance.skillPointsText.text = "Points : " + PlayerStats.Instance.skillPoints;
+        PlayerStats.Instance.healthText.text = "Health: " + PlayerStats.Instance.maxHP;
     }
 }

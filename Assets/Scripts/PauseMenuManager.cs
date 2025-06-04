@@ -11,7 +11,10 @@ public class PauseMenuManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            TogglePause();
+            if (!PlayerStats.Instance.isDead)
+            {
+                TogglePause();
+            }
         }
     }
 

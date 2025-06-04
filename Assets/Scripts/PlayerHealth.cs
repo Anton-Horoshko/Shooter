@@ -6,6 +6,7 @@ using TMPro;
 public class PlayerHealth : MonoBehaviour
 {
     public TextMeshPro healthText;
+    public GameObject deathMenu;
 
     public void TakeDamage(int damage)
     {
@@ -14,7 +15,7 @@ public class PlayerHealth : MonoBehaviour
         if (PlayerStats.Instance.maxHP <= 0)
         {
             PlayerStats.Instance.maxHP = 0;
-            Debug.Log("Player has died");
+            OnPlayerDeath();
         }
     }
 
@@ -25,5 +26,14 @@ public class PlayerHealth : MonoBehaviour
             Debug.Log("Player is colliding with Enemy");
             TakeDamage(20);
         }
+    }
+
+    public void OnPlayerDeath()
+    {
+        PlayerStats.Instance.isDead = true;
+        Time.timeScale = 0f;
+        Cursor.lockState = CursorLockMode.None;
+        deathMenu.SetActive(true);
+
     }
 }
