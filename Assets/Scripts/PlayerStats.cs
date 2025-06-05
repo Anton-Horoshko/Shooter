@@ -10,6 +10,7 @@ public class PlayerStats : MonoBehaviour
 
     public TMPro.TextMeshProUGUI skillPointsText;
     public TextMeshPro healthText;
+    public TextMeshPro xpText;
 
     public int currentLevel = 1;
     public int currentXP = 0;
@@ -46,6 +47,8 @@ public class PlayerStats : MonoBehaviour
             currentXP -= xpToNextLevel;
             LevelUp();
         }
+
+        xpText.text = "XP: " + currentXP + " / " + xpToNextLevel;
     }
 
     void LevelUp()
@@ -57,6 +60,7 @@ public class PlayerStats : MonoBehaviour
         upGrade.ToggleUpgrade();
 
         xpToNextLevel += Mathf.RoundToInt(xpToNextLevel * 0.05f);
+        xpText.text = "XP: " + currentXP + " / " + xpToNextLevel;
     }
 
     public void UpgradeDamage()
