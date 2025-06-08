@@ -2704,11 +2704,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ee0c21fa19b2fd248ac3964d24c16a4b, type: 3}
   m_PrefabInstance: {fileID: 1356820399}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &960382139 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1746670886850665256, guid: f563e48e9af249a44ad13ec3efa2f72c, type: 3}
-  m_PrefabInstance: {fileID: 4215528932530593876}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &963194228 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7384471471102128861, guid: cc88a1fd4d925024882ea70d18085776, type: 3}
@@ -6048,77 +6043,29 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 945082871555138536, guid: f563e48e9af249a44ad13ec3efa2f72c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 960382139}
-    - target: {fileID: 945082871555138536, guid: f563e48e9af249a44ad13ec3efa2f72c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 1088888006}
-    - target: {fileID: 945082871555138536, guid: f563e48e9af249a44ad13ec3efa2f72c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 945082871555138536, guid: f563e48e9af249a44ad13ec3efa2f72c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: UpgradeHP
-      objectReference: {fileID: 0}
-    - target: {fileID: 1908731260907236522, guid: f563e48e9af249a44ad13ec3efa2f72c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 960382139}
-    - target: {fileID: 1908731260907236522, guid: f563e48e9af249a44ad13ec3efa2f72c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 1088888006}
     - target: {fileID: 1908731260907236522, guid: f563e48e9af249a44ad13ec3efa2f72c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 1908731260907236522, guid: f563e48e9af249a44ad13ec3efa2f72c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: UpgradeDamage
-      objectReference: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1088888006}
     - target: {fileID: 2508684179804673429, guid: f563e48e9af249a44ad13ec3efa2f72c, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2529260773921646507, guid: f563e48e9af249a44ad13ec3efa2f72c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 960382139}
-    - target: {fileID: 2529260773921646507, guid: f563e48e9af249a44ad13ec3efa2f72c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 1088888006}
-    - target: {fileID: 2529260773921646507, guid: f563e48e9af249a44ad13ec3efa2f72c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 2529260773921646507, guid: f563e48e9af249a44ad13ec3efa2f72c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: UpgradeMaxShootDistance
-      objectReference: {fileID: 0}
     - target: {fileID: 3146805812593367102, guid: f563e48e9af249a44ad13ec3efa2f72c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2109967324}
     - target: {fileID: 3401686054340725768, guid: f563e48e9af249a44ad13ec3efa2f72c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 960382139}
-    - target: {fileID: 3401686054340725768, guid: f563e48e9af249a44ad13ec3efa2f72c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 1088888006}
-    - target: {fileID: 3401686054340725768, guid: f563e48e9af249a44ad13ec3efa2f72c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 3401686054340725768, guid: f563e48e9af249a44ad13ec3efa2f72c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: UpgradeMaxShootBounces
-      objectReference: {fileID: 0}
     - target: {fileID: 4716750464118097780, guid: f563e48e9af249a44ad13ec3efa2f72c, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -6200,64 +6147,23 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5130214695705848415, guid: f563e48e9af249a44ad13ec3efa2f72c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5130214695705848415, guid: f563e48e9af249a44ad13ec3efa2f72c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2109967327}
-    - target: {fileID: 5130214695705848415, guid: f563e48e9af249a44ad13ec3efa2f72c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GoToScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 5130214695705848415, guid: f563e48e9af249a44ad13ec3efa2f72c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MainMenuManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 5130214695705848415, guid: f563e48e9af249a44ad13ec3efa2f72c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 5450836961951652008, guid: f563e48e9af249a44ad13ec3efa2f72c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 960382139}
     - target: {fileID: 5450836961951652008, guid: f563e48e9af249a44ad13ec3efa2f72c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 1088888006}
-    - target: {fileID: 5450836961951652008, guid: f563e48e9af249a44ad13ec3efa2f72c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 5450836961951652008, guid: f563e48e9af249a44ad13ec3efa2f72c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: UpgradeJumpHeight
-      objectReference: {fileID: 0}
-    - target: {fileID: 5656122867589760169, guid: f563e48e9af249a44ad13ec3efa2f72c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 960382139}
     - target: {fileID: 5656122867589760169, guid: f563e48e9af249a44ad13ec3efa2f72c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 1088888006}
-    - target: {fileID: 5656122867589760169, guid: f563e48e9af249a44ad13ec3efa2f72c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 5656122867589760169, guid: f563e48e9af249a44ad13ec3efa2f72c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: UpgradeSpeed
-      objectReference: {fileID: 0}
     - target: {fileID: 7002915191537140749, guid: f563e48e9af249a44ad13ec3efa2f72c, type: 3}
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 8285886976903950116, guid: f563e48e9af249a44ad13ec3efa2f72c, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f563e48e9af249a44ad13ec3efa2f72c, type: 3}
@@ -6330,6 +6236,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7683662614492346856, guid: cc88a1fd4d925024882ea70d18085776, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 6377533858814259471, guid: cc88a1fd4d925024882ea70d18085776, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: cc88a1fd4d925024882ea70d18085776, type: 3}
